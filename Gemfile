@@ -40,6 +40,7 @@ end
 
 group :production do
   gem 'kandan-count'
+  gem 'newrelic_rpm'
 end
 
 group :development do
