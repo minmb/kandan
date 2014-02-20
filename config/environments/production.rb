@@ -11,6 +11,8 @@ Kandan::Application.configure do
   # Disable Rails's static asset server (Apache or nginx will already do this)
   config.serve_static_assets = false
 
+  config.assets.enabled = true
+
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
@@ -19,6 +21,8 @@ Kandan::Application.configure do
 
   # Generate digests for assets URLs
   config.assets.digest = true
+
+  config.assets.prefix = "/assets"
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
@@ -43,7 +47,7 @@ Kandan::Application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server
-  # config.action_controller.asset_host = "http://assets.example.com"
+  config.action_controller.asset_host = "//#{ENV['FOG_DIRECTORY']}.s3.amazonaws.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
   # config.assets.precompile += %w( search.js )

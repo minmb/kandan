@@ -38,6 +38,7 @@ group :assets do
   gem 'uglifier'
   gem 'bootstrap-sass'
   gem 'gemoji'
+  gem 'asset_sync'
 end
 
 group :production do
